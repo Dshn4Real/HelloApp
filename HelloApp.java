@@ -17,6 +17,12 @@ public class HelloApp {
             }
 
             name = nameBuilder.toString();
+        // Default name
+        String name = "World";
+
+        // Check if a name is provided
+        if (args.length > 0) {
+            name = args[0];
         }
 
         System.out.println("Hello, " + name + "!");
