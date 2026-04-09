@@ -2,37 +2,14 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
-public class HelloApp {
+        String name;
 
-    public static void main(String[] args) {
-
-        String name = "World";
-
-        if (args.length > 0) {
-
-            StringBuilder nameBuilder = new StringBuilder();
-            boolean first = true;
-
-            for (String arg : args) {
-
-                if (!first) {
-                    nameBuilder.append(", ");
-                }
-
-                nameBuilder.append(arg);
-                first = false;
-            }
-
-            name = nameBuilder.toString();
-        // Default name
-        String name = "World";
-
-        // Check if a name is provided
-        if (args.length > 0) {
-            name = args[0];
+        if (args.length == 0) {
+            name = "World";
+        } else {
+            name = String.join(", ", args);
         }
 
         System.out.println("Hello, " + name + "!");
     }
-}
 }
